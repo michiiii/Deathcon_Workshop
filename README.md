@@ -125,8 +125,58 @@ Get-CriticalPermissionOverview -SharePermissions $permissions
 Get-CriticalPermissionsByUser -SharePermissions $permissions -UserName "Authenticated Users"
 
 ```
+## Further points not mentioned in this talk but to be considered:
 
- 
+ ## Legacy Protocols and Services
+- **Net-NTLMv1 **: Older authentication protocols like Net-NTLMv1 can be are vulnerable and the use of these protocols can be exploited
+- **SMBv1 (Server Message Block version 1)**: If still in use, this file-sharing protocol is known for vulnerabilities such as those exploited by the WannaCry ransomware.
+
+### Weak passwords
+- The standard in 2005 and 2023 differ greatly when we are speaking about password security.
+- Perform regular password audit to identify accounts with deprecated and weak passwords.
+
+## Deprecated Configuration
+- **Unconstrained Delegation**: Configurations that permit unconstrained delegation can allow attackers to impersonate any user to any service, which is particularly dangerous.
+- **Old Group Policies**: Legacy GPOs might inadvertently enforce insecure settings on newer systems.
+
+## Orphaned Objects and Accounts
+- **Stale User Accounts**: Accounts belonging to former employees could be compromised and used as entry points.
+- **Orphaned SID (Security Identifier) Histories**: When domains are merged or migrated, SID history can allow for privilege escalation if not managed properly.
+
+## Lack of Monitoring and Auditing
+- **Inadequate Auditing**: Without proper auditing settings, malicious activities can go unnoticed.
+
+## Unstructured Access Permissions
+- **Excessive User Privileges**: Over time, users may accumulate unnecessary permissions, leading to a violation of the principle of least privilege.
+- **Nested Group Permissions**: Complex nested group memberships can obscure who has access to what, making oversight difficult.
+
+## Disjointed Administrative Practices
+- **Inconsistent Administrative Approaches**: Each generation of IT administrators may have brought its own approach to managing the AD, resulting in a patchwork of practices that can be hard to secure.
+- **Lack of Standardization**: Without standard practices, it becomes challenging to ensure that configurations meet security best practices.
+
+## Remediation Strategies
+### Auditing and Clean-Up:
+- Conduct a comprehensive audit of the AD environment to identify and rectify any outdated configurations, unnecessary user rights assignments, and legacy protocols still in use.
+
+### Implementing a Least Privilege Model:
+- Ensure that users only have the permissions necessary to perform their job functions, minimizing the potential damage of a compromised account.
+
+### Streamlining Group Policy Objects:
+- Review and consolidate GPOs to avoid conflicting settings and to ensure they meet current security standards.
+
+### Regularly Scheduled Reviews:
+- Institute periodic reviews of the AD environment to ensure it evolves in line with current best practices and security standards. 
+
+### Education and Training:
+- Teach your administrators to work with tools like PingCastle and Bloodhound. It´s best thing you can do. Provide ongoing education for IT staff regarding the latest AD management and security best practices.
+
+### Documentation and Change Management:
+- Establish a rigorous documentation and change management process to maintain a history of modifications and to support the troubleshooting of issues.
+
+### Employing Advanced Security Measures:
+- Utilize tools for anomaly detection, implement advanced threat protection solutions, and embrace a Zero Trust model to further bolster security.
+
+The historical baggage of AD environments is a complex issue that combines technical debt with organizational and human factors. A proactive, continuous improvement approach to IT management can help organizations avoid the perils of the past and pave the way for a secure IT infrastructure.
 
 ***
 # References
