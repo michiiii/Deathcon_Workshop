@@ -132,7 +132,7 @@ Get-CriticalPermissionsByUser -SharePermissions $permissions -UserName "Authenti
 - SMBv1 (Server Message Block version 1): If still in use, this file-sharing protocol is known for vulnerabilities such as those exploited by the WannaCry ransomware.
 
 ### Weak passwords
-- The standard in 2005 and 2023 differ greatly when we are speaking about password security.
+- The standards in 2005 and 2023 differ greatly when we are speaking about password security.
 - Perform regular password audit to identify accounts with deprecated and weak passwords.
 
 ## Deprecated Configuration
