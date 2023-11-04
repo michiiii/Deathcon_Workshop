@@ -176,8 +176,6 @@ Get-CriticalPermissionsByUser -SharePermissions $permissions -UserName "Authenti
 ### Employing Advanced Security Measures:
 - Utilize tools for anomaly detection, implement advanced threat protection solutions, and embrace a Zero Trust model to further bolster security.
 
-The historical baggage of AD environments is a complex issue that combines technical debt with organizational and human factors. A proactive, continuous improvement approach to IT management can help organizations avoid the perils of the past and pave the way for a secure IT infrastructure.
-
 ***
 # References
 - TBD
