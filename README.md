@@ -128,8 +128,8 @@ Get-CriticalPermissionsByUser -SharePermissions $permissions -UserName "Authenti
 ## Further points not mentioned in this talk but to be considered:
 
  ## Legacy Protocols and Services
-- **Net-NTLMv1 **: Older authentication protocols like Net-NTLMv1 can be are vulnerable and the use of these protocols can be exploited
-- **SMBv1 (Server Message Block version 1)**: If still in use, this file-sharing protocol is known for vulnerabilities such as those exploited by the WannaCry ransomware.
+- Net-NTLMv1: Older authentication protocols like Net-NTLMv1 can be are vulnerable and the use of these protocols can be exploited
+- SMBv1 (Server Message Block version 1): If still in use, this file-sharing protocol is known for vulnerabilities such as those exploited by the WannaCry ransomware.
 
 ### Weak passwords
 - The standard in 2005 and 2023 differ greatly when we are speaking about password security.
