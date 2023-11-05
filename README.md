@@ -10,7 +10,7 @@ This is the repository for the workshop to my DeathCon Talk:
 As told in my talk we will use Bloodhound and neo4j to identify potential dangerous permissions within the Active Directory environment.
 
 To do this you will need to install neo4j and Bloodhound on your machine:
-	[Windows — BloodHound 4.3.1 documentation](https://bloodhound.readthedocs.io/en/latest/installation/windows.html)
+- [Windows — BloodHound 4.3.1 documentation](https://bloodhound.readthedocs.io/en/latest/installation/windows.html)
 	
 
 ## Go to the neo4j webserver and run a testquery
