@@ -130,8 +130,10 @@ Get-CriticalPermissionsByUser -SharePermissions $permissions -UserName "Authenti
 ```
 
 ### Detection
-I am not a detection engineed, but I can just think about placing a useless honeypot file with interesting permissions on one of the shares.
-Edit the SACL to log specific operations on that file e.g. write operations. And trigger an alarm.
+I am not a detection engineer, but I can just think about placing a useless honeypot file with interesting permissions on one of the shares.
+Edit the SACL to log specific operations on that file e.g. write operations and trigger alarms as they happen.
+
+
 
 
 ## Further points not mentioned in this talk but to be considered:
