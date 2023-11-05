@@ -64,7 +64,7 @@ The following cypher query returns first degree object controller:
 
 ```cypher
 MATCH p=(u)-[r1]->(n) WHERE r1.isacl=true 
-WITH u.name as name, LABELS(u)[1] as type, 
+WITH u.name as name, LABELS(u)[0] as type, 
 COUNT(DISTINCT(n)) as controlled 
 WHERE name IS NOT NULL 
 RETURN type, name, controlled 
@@ -81,7 +81,7 @@ The following cypher query returns group delegated object controllers:
 
 ```cypher
 MATCH p=(u)-[r1:MemberOf*1..]->(g:Group)-[r2]->(n) WHERE r2.isacl=true
-WITH u.name as name, LABELS(u)[1] as type, g.highvalue as highly_privileged,
+WITH u.name as name, LABELS(u)[0] as type, g.highvalue as highly_privileged,
 COUNT(DISTINCT(n)) as controlled 
 WHERE name IS NOT NULL 
 RETURN type, name, highly_privileged, controlled 
@@ -99,7 +99,7 @@ But for the sake of completeness... here it is.
 // Transitive Object Control in domain (TAKES ENORMOUS TIME TO COMPUTE! You were warned)
 MATCH p=shortestPath((u)-[r1:MemberOf|AddMember|AllExtendedRights|ForceChangePassword|GenericAll|GenericWrite|WriteDacl|WriteOwner|Owns*1..]->(n))
 WHERE u<>n
-WITH u.name as name, LABELS(u)[1] as type, 
+WITH u.name as name, LABELS(u)[0] as type, 
 COUNT(DISTINCT(n)) as controlled 
 WHERE name IS NOT NULL
 RETURN type, name, controlled 
