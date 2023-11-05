@@ -1,5 +1,9 @@
 # DeathCon Workshop - Historically grown Active Directory Environments - The dead bodies in your basement
 ***
+This is the repository for the workshop to my DeathCon Talk:
+
+- https://www.youtube.com/watch?v=m5QHyQk-9ys
+
 ## Identification of permission issues on AD object
 
 ### Installation of Bloodhound and neo4j
