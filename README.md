@@ -127,8 +127,13 @@ Get-CriticalPermissionOverview -SharePermissions $permissions
 
 # Finally you can search for one of the users that have been shown in the overview
 Get-CriticalPermissionsByUser -SharePermissions $permissions -UserName "Authenticated Users"
-
 ```
+
+### Detection
+I am not a detection engineed, but I can just think about placing a useless honeypot file with interesting permissions on one of the shares.
+Edit the SACL to log specific operations on that file e.g. write operations. And trigger an alarm.
+
+
 ## Further points not mentioned in this talk but to be considered:
 
  ## Legacy Protocols and Services
