@@ -107,6 +107,16 @@ ORDER BY controlled DESC
 LIMIT 500
 ```
 
+There is also a tool you can use with a bigger collection of neo4j queries:
+- https://github.com/PlumHound/PlumHound
+
+More intersting cypher queries
+- https://github.com/mgeeky/Penetration-Testing-Tools/blob/master/red-teaming/bloodhound/Handy-BloodHound-Cypher-Queries.md
+- https://hausec.com/2019/09/09/bloodhound-cypher-cheatsheet/
+- https://gist.github.com/jeffmcjunkin/7b4a67bb7dd0cfbfbd83768f3aa6eb12
+- https://gist.github.com/seajaysec/c7f0995b5a6a2d30515accde8513f77d
+
+PS: Some of the queries referenced don´t work anymore
 
 ## File permission issues
 
@@ -189,4 +199,4 @@ Edit the SACL to log specific operations on that file e.g. write operations and 
 
 ***
 # References
-- TBD
+
